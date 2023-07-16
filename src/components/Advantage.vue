@@ -1,10 +1,35 @@
+<script setup>
+import {themeColor} from '../data/items'
+const heading = 'Advantage of using our products'
+const subHeading = 'Far from the countries Vokalia and Consonantia'
+const buttonLearnMore = 'Learn More'
+const advantages = [
+    {
+        name: 'Grow Your Business',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+    },
+    {
+        name: 'Build Products',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+    },
+    {
+        name: 'Success Every Day',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+    },
+    {
+        name: 'Bring Ideas to Life',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.'
+    }
+]
+</script>
+
 <template>
     <div class="untree_co-section">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="heading">Advantage of using our products</h2>
-                    <p>Far from the countries Vokalia and Consonantia</p>
+                    <h2 class="heading">{{ heading }}</h2>
+                    <p>{{ subHeading }}</p>
                 </div>
             </div>
             <div class="row">
@@ -17,9 +42,9 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Grow Your Business</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p><a href="#" class="read-more">Learn More</a></p>
+                            <h3>{{ advantages[0].name }}</h3>
+                            <p>{{ advantages[0].des }}</p>
+                            <p><a href="#" class="read-more" :style="[{color:themeColor}]">{{ buttonLearnMore }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -32,9 +57,9 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Build Products</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p><a href="#" class="read-more">Learn More</a></p>
+                            <h3>{{ advantages[1].name }}</h3>
+                            <p>{{ advantages[1].des }}</p>
+                            <p><a href="#" class="read-more" :style="[{color:themeColor}]">{{ buttonLearnMore }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -47,9 +72,9 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Success Every Day</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p><a href="#" class="read-more">Learn More</a></p>
+                            <h3>{{ advantages[2].name }}</h3>
+                            <p>{{ advantages[2].des }}</p>
+                            <p><a href="#" class="read-more" :style="[{color:themeColor}]">{{ buttonLearnMore }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -61,9 +86,9 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Bring Ideas to Life</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                            <p><a href="#" class="read-more">Learn More</a></p>
+                            <h3>{{ advantages[3].name }}</h3>
+                            <p>{{ advantages[3].des }}</p>
+                            <p><a href="#" class="read-more" :style="[{color:themeColor}]">{{ buttonLearnMore }}</a></p>
                         </div>
                     </div>
                 </div>

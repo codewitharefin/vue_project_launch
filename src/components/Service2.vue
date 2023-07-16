@@ -1,3 +1,30 @@
+<script setup>
+import mainPhoto from '../assets/images/service2.jpg'
+const items = [
+    {
+        id: 1,
+        name: 'Grow Your Business',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.'
+    },
+    {
+        id: 2,
+        name: 'Build Products',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.'
+    },
+    {
+        id: 3,
+        name: 'Success Every Day',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.'
+    },
+    {
+        id: 4,
+        name: 'Bring Ideas to Life',
+        des: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.'
+    }
+]
+const total = 4
+</script>
+
 <template>
     <div class="untree_co-section bg-light">
         <div class="container">
@@ -11,8 +38,8 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Grow Your Business</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <h3>{{ items[0].name }}</h3>
+                            <p>{{ items[0].des }}</p>
                         </div>
                     </a>
                     <a href="#" class="service link horizontal d-flex" data-aos="fade-left" data-aos-delay="100">
@@ -23,8 +50,8 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Build Products</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <h3>{{ items[1].name }}</h3>
+                            <p>{{ items[1].des }}</p>
                         </div>
                     </a>
                     <a href="#" class="service link horizontal d-flex" data-aos="fade-left" data-aos-delay="200">
@@ -35,8 +62,8 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Success Every Day</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <h3>{{ items[2].name }}</h3>
+                            <p>{{ items[2].des }}</p>
                         </div>
                     </a>
                     <a href="#" class="service link horizontal d-flex" data-aos="fade-left" data-aos-delay="300">
@@ -46,8 +73,8 @@
                             </svg>
                         </div>
                         <div class="service-contents">
-                            <h3>Bring Ideas to Life</h3>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+                            <h3>{{ items[3].name }}</h3>
+                            <p>{{ items[3].des }}</p>
                         </div>
                     </a>
                 </div>
@@ -55,20 +82,20 @@
                     <div class="img-shadow">
                         <div class="owl-single no-dots owl-carousel">
                             <div class="item">
-                                <span class="number">1/4</span>
-                                <img src="images/dashboard.jpg" alt="Image" class="img-fluid">
+                                <span class="number">{{ items[0].id }}/{{ total }}</span>
+                                <img :src="mainPhoto" alt="Image" class="img-fluid">
                             </div>
                             <div class="item">
-                                <span class="number">2/4</span>
-                                <img src="images/dashboard.jpg" alt="Image" class="img-fluid">
+                                <span class="number">{{ items[1].id }}/{{ total }}</span>
+                                <img :src="mainPhoto" alt="Image" class="img-fluid">
                             </div>
                             <div class="item">
-                                <span class="number">3/4</span>
-                                <img src="images/dashboard.jpg" alt="Image" class="img-fluid">
+                                <span class="number">{{ items[2].id }}/{{ total }}</span>
+                                <img :src="mainPhoto" alt="Image" class="img-fluid">
                             </div>
                             <div class="item">
-                                <span class="number">4/4</span>
-                                <img src="images/dashboard.jpg" alt="Image" class="img-fluid">
+                                <span class="number">{{ items[3].id }}/{{ total }}</span>
+                                <img :src="mainPhoto" alt="Image" class="img-fluid">
                             </div>
                         </div>
                     </div>
